@@ -1,0 +1,55 @@
+\documentclass[letter,12pt,a4paper,backaddress=off]{scrlttr2}
+
+% Packages
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{marvosym}
+\usepackage{lipsum} % Used to generate example text
+
+\KOMAoptions{fromalign=right,fromrule=aftername} % Aligns ‘from address’ left
+\setkomavar{fromname}{Your Name} % Name
+\setkomavar{fromaddress}{Street\\City / Town\\County\\Postcode} % Address
+\setkomavar{fromphone}{+44 (0)7770 000000} % Phone Number
+\setkomavar{fromemail}{email@address.com} % Email
+\setkomavar{fromurl}{http://www.elliotjreed.com/} % Website
+
+% Prevents overfull hbox and vbox
+\hbadness=10000
+\hfuzz=50pt
+\vbadness=10000
+\vfuzz=50pt
+\linespread{1.2} % Sets line spacing
+\usepackage{fancyhdr} % Package required for footer
+\pagestyle{fancy} % Footer pagestyle
+
+% Footer
+\fancyhf{}
+\fancyfoot[c]{\centering\scshape{\renewcommand{\\}{\ {\large\textperiodcentered}\ }\usekomavar{fromaddress}}\\{\Large\Letter} \usekomavar{fromemail} \ {\Large\Telefon} \usekomavar{fromphone}}
+
+\renewcommand\headrulewidth{0pt} % Size of the header rule
+\renewcommand\footrulewidth{0.001pt} % Size of the footer rule
+
+\begin{document} 
+
+\begin{letter}{ 
+Mr. Robin Hood
+\\Loxley Manor
+\\Loxley
+\\Nottingham
+\\NG1 1RH }
+
+\setkomavar{subject}{RE: New Recurved Bow}
+
+\opening{Dear Mr. Hood,}
+
+\thispagestyle{fancy}
+
+Put the text of your letter here, then you can inform people that if they are not using \LaTeX then they are \emph{a knave, a rascal, an eater of broken meats, a base, proud, shallow, beggarly, three-suited, action-taking, whoreson glass-gazing, superserviceable, finical rogue; one-trunk-inheriting slave; one that wouldst be a bawd in way of good service, and art nothing but the composition of a knave, beggar, coward, pander, and the son and heir of a mongrel bitch, one whom I will beat into clamorous whining if thou deniest the least syllable of thy addition.} Or whatever insult one deems apt in such a situation.
+
+\centering % Aligns closing remarks center
+\closing{Yours Sincerely,} % Closing remark. Name will be inserted automatically
+
+\end{letter} 
+\end{document}
